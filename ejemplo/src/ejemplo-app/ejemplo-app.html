@@ -1,0 +1,39 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+
+<dom-module id="ejemplo-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+
+    <paper-input label="Escribe algo" value="{{prop1}}"></paper-input>
+    <paper-input label="username">
+      <iron-icon icon="mail" slot="prefix"></iron-icon>
+      <div slot="suffix">@email.com</div>
+    </paper-input>
+    <paper-input label="password" type="password"></paper-input>
+  </template>
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class EjemploApp extends Polymer.Element {
+      static get is() { return 'ejemplo-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'ejemplo-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(EjemploApp.is, EjemploApp);
+  </script>
+</dom-module>
