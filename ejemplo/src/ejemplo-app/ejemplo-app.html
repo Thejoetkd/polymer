@@ -7,15 +7,25 @@
       :host {
         display: block;
       }
+      h2{
+        text-align: center;
+        color: brown;
+      }
+      h3{
+        text-align: center;
+        color: chocolate;
+      }
     </style>
     <h2>Hello [[prop1]]!</h2>
+    <h3>Email: [[prop2]]</h3>
+    <h3>Password: [[prop3]]</h3>
 
     <paper-input label="Escribe algo" value="{{prop1}}"></paper-input>
-    <paper-input label="username">
+    <paper-input label="username" value="{{prop2}}">
       <iron-icon icon="mail" slot="prefix"></iron-icon>
       <div slot="suffix">@email.com</div>
     </paper-input>
-    <paper-input label="password" type="password"></paper-input>
+    <paper-input label="password" type="password" value="{{prop3}}"></paper-input>
   </template>
   <script>
     /**
@@ -29,6 +39,10 @@
           prop1: {
             type: String,
             value: 'ejemplo-app'
+          },
+          prop2: {
+            type:String,
+            value: 'ejemplo@ejemplo.com.mx'
           }
         };
       }
