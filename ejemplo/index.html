@@ -4,17 +4,26 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>Polymer Web Component</title>
+    <title>Polymer </title>
     <meta name="description" content="ejemplo description">
 
     <!-- See https://goo.gl/OOhYW5 -->
     <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="../bootstrap.css">
 
     <script src="./bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
     <link rel="import" href="./src/ejemplo-app/ejemplo-app.html">
   </head>
   <body>
-    <ejemplo-app></ejemplo-app>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ejemplo-app></ejemplo-app>
+      </div>
+    </div>
+  </div>
+   
+    <script src="../bootstrap.js"></script>
   </body>
 </html>
